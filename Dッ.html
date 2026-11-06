@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dッ</title>
+<style>
+:root{--bg:#f6f4ff;--surface:#fff;--text:#14111f;--muted:#5d5873;--accent:#7c3aed;--accent2:#ec4899;--border:#e3def5;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0b1a;--surface:#181327;--text:#f1eeff;--muted:#a9a3c4;--accent:#a78bfa;--accent2:#f472b6;--border:#2c2542}}
+:root[data-theme="dark"]{--bg:#0e0b1a;--surface:#181327;--text:#f1eeff;--muted:#a9a3c4;--accent:#a78bfa;--accent2:#f472b6;--border:#2c2542}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.logo{font-weight:800;font-size:1.5rem;color:var(--accent);text-decoration:none}
+nav a.l{color:var(--muted);text-decoration:none;margin-left:18px;font-size:.95rem}
+.hero{text-align:center;padding:70px 0 60px}
+.mark{width:120px;height:120px;border-radius:32px;margin:0 auto 24px;display:grid;place-items:center;font-size:3rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 20px 50px -15px var(--accent)}
+h1{font-size:clamp(2.2rem,7vw,3.6rem);margin:0 0 10px;line-height:1.1}
+.hero p{color:var(--muted);max-width:520px;margin:0 auto 28px;font-size:1.1rem}
+.btn{display:inline-block;padding:12px 24px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin:4px}
+.btn.o{background:transparent;color:var(--text);border:1px solid var(--border)}
+section{padding:40px 0}
+h2{font-size:1.7rem;margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:22px;text-decoration:none;color:inherit;display:block;transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.ic{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:#fff;font-weight:700;margin-bottom:12px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.card h3{margin:0 0 4px}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.thumb{height:110px;border-radius:14px;margin-bottom:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));opacity:.85}
+.thumb.b{background:linear-gradient(135deg,var(--accent2),#f59e0b)}
+.thumb.c{background:linear-gradient(135deg,#06b6d4,var(--accent))}
+.thumb.mc{display:grid;place-items:center;background:linear-gradient(135deg,#3f9b2f,#6b4423);color:#fff;font-weight:800;font-size:1.3rem;opacity:1}.acts{margin-top:14px}.card.feat{grid-column:span 2}@media(max-width:560px){.card.feat{grid-column:auto}}.note{color:var(--muted);font-size:.9rem;margin-top:14px}
+footer{text-align:center;color:var(--muted);padding:40px 0 30px;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="logo" href="#top">Dッ</a><div><a class="l" href="#projeler">Projeler</a><a class="l" href="#sosyal">Sosyal</a></div></nav>
+<header class="hero" id="top">
+<div class="mark">Dッ</div>
+<h1>Merhaba, ben Dッ</h1>
+<p>İçerik üretiyor, kod yazıyor ve projeler geliştiriyorum. Çalışmalarımı buradan takip edebilirsin.</p>
+<a class="btn" href="#projeler">Projelerim</a><a class="btn o" href="#sosyal">Beni takip et</a>
+</header>
+<section id="projeler">
+<h2>Projeler</h2>
+<div class="grid">
+<div class="card feat"><div class="thumb mc"><span>⛏️ Minecraft.gg</span></div><h3>Minecraft.gg</h3><p>Minecraft temalı web sitesi projem. Siteye girebilir ya da dosyayı indirebilirsin.</p>
+<div class="acts"><a class="btn" href="https://dorukyuvel.github.io/Minecraft.gg/Minecraft.gg.html" target="_blank" rel="noopener">Siteye gir</a><a class="btn o" href="https://github.com/dorukyuvel/Minecraft.gg" target="_blank" rel="noopener">İndir</a></div></div>
+<div class="card"><div class="thumb b"></div><h3>Yeni proje</h3><p>Yakında eklenecek.</p></div>
+</div>
+<p class="note">Tüm kodlarım için GitHub profilime göz atabilirsin.</p>
+</section>
+<section id="sosyal">
+<h2>Sosyal medya</h2>
+<div class="grid">
+<a class="card" href="https://www.youtube.com/@Doruk%E3%83%83" target="_blank" rel="noopener"><div class="ic">YT</div><h3>YouTube</h3><p>@Dorukッ — videolar ve içerikler</p></a>
+<a class="card" href="https://www.instagram.com/dorukyuvel/" target="_blank" rel="noopener"><div class="ic">IG</div><h3>Instagram</h3><p>@dorukyuvel — günlük paylaşımlar</p></a>
+<a class="card" href="https://github.com/dorukyuvel" target="_blank" rel="noopener"><div class="ic">GH</div><h3>GitHub</h3><p>dorukyuvel — açık kaynak projeler</p></a>
+</div>
+</section>
+<footer>© 2026 Dッ</footer>
+</div>
+</body>
+</html>
