@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dッ</title>
 <style>
-:root{--bg:#f4f2ff;--surface:#fff;--text:#14111f;--muted:#5d5873;--accent:#7c3aed;--accent2:#ec4899;--border:#e3def5;--grn:#22c55e;--red:#ef4444;--gry:#9ca3af;
+:root{--bg:#f4f2ff;--surface:#fff;--text:#14111f;--muted:#5d5873;--accent:#7c3aed;--accent2:#ec4899;--green:#16a34a;--red:#dc2626;--border:#e3def5;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0b1a;--surface:#181327;--text:#f1eeff;--muted:#a9a3c4;--accent:#a78bfa;--accent2:#f472b6;--border:#2c2542}}
-:root[data-theme="dark"]{--bg:#0e0b1a;--surface:#181327;--text:#f1eeff;--muted:#a9a3c4;--accent:#a78bfa;--accent2:#f472b6;--border:#2c2542}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0b1a;--surface:#181327;--text:#f1eeff;--muted:#a9a3c4;--accent:#a78bfa;--accent2:#f472b6;--green:#4ade80;--red:#f87171;--border:#2c2542}}
+:root[data-theme="dark"]{--bg:#0e0b1a;--surface:#181327;--text:#f1eeff;--muted:#a9a3c4;--accent:#a78bfa;--accent2:#f472b6;--green:#4ade80;--red:#f87171;--border:#2c2542}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6}
 .wrap{max-width:960px;margin:0 auto;padding:0 20px}
@@ -19,70 +19,60 @@ nav a.l{color:var(--muted);text-decoration:none;margin-left:16px;font-size:.95re
 .hero{text-align:center;padding:60px 0 40px}
 .mark{width:110px;height:110px;border-radius:30px;margin:0 auto 22px;display:grid;place-items:center;font-size:2.8rem;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 20px 50px -15px var(--accent)}
 h1{font-size:clamp(2.1rem,7vw,3.4rem);margin:0 0 10px;line-height:1.1}
-.hero p{color:var(--muted);max-width:520px;margin:0 auto 24px;font-size:1.05rem}
-.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin:4px;border:0;font-size:1rem;cursor:pointer;font-family:inherit}
+.hero p{color:var(--muted);max-width:540px;margin:0 auto 26px;font-size:1.05rem}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--accent);color:#fff;text-decoration:none;font-weight:600;margin:4px;border:0;font:inherit;font-weight:600;cursor:pointer}
 .btn.o{background:transparent;color:var(--text);border:1px solid var(--border)}
 section{padding:36px 0}
 h2{font-size:1.6rem;margin:0 0 18px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
-.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:22px;text-decoration:none;color:inherit;display:block;transition:transform .2s}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:20px;text-decoration:none;color:inherit;display:block;transition:transform .2s}
 a.card:hover{transform:translateY(-4px)}
-.ic{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;color:#fff;font-weight:700;margin-bottom:10px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
-.card h3{margin:0 0 4px}.card p{margin:0;color:var(--muted);font-size:.93rem}
-.srv{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.srv .card{padding:26px}
-.addr{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:10px 12px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85rem;word-break:break-all;margin:12px 0}
-.row{display:flex;align-items:center;gap:8px;font-weight:600}
-.dot{width:12px;height:12px;border-radius:50%;background:var(--gry)}
-.dot.on{background:var(--grn);box-shadow:0 0 10px var(--grn)}.dot.off{background:var(--red)}
-.big{font-size:2.4rem;font-weight:800;margin:8px 0 0}
-#players{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:8px}
-#players li{background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:4px 12px;font-size:.9rem}
-.mc{display:flex;gap:18px;flex-wrap:wrap;align-items:center}
-.cube{width:110px;height:110px;border-radius:18px;flex:none;background:linear-gradient(#4cff3a 0 30%,#7a5230 30% 100%);box-shadow:inset 0 0 0 6px rgba(0,0,0,.18)}
-.mc .t{flex:1;min-width:220px}
+.ic{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;color:#fff;font-weight:700;font-size:.9rem;margin-bottom:10px;background:linear-gradient(135deg,var(--accent),var(--accent2))}
+.card h3{margin:0 0 2px}
+.card p{margin:0;color:var(--muted);font-size:.92rem}
+.srv{display:grid;gap:14px}
+.row{display:flex;flex-wrap:wrap;gap:8px 24px;color:var(--muted);font-size:.95rem}
+.row b{color:var(--text)}
+.addr{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+code{background:var(--bg);border:1px solid var(--border);padding:8px 12px;border-radius:10px;font-size:.95rem;word-break:break-all}
+.st{display:inline-flex;align-items:center;gap:8px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--muted)}
+.st.on .dot{background:var(--green)}.st.off .dot{background:var(--red)}
+.thumb{height:100px;border-radius:14px;margin-bottom:12px;background:linear-gradient(135deg,#22c55e,#16a34a 50%,#854d0e)}
+.note{color:var(--muted);font-size:.88rem;margin-top:12px}
 footer{text-align:center;color:var(--muted);padding:36px 0 28px;font-size:.9rem}
 </style>
 </head>
 <body>
 <div class="wrap">
-<nav><a class="logo" href="#top">Dッ</a><div><a class="l" href="#sunucu">Sunucu</a><a class="l" href="#projeler">Projeler</a><a class="l" href="#sosyal">Sosyal</a></div></nav>
+<nav><a class="logo" href="#top">Dッ</a><div><a class="l" href="#sunucu">Sunucu</a><a class="l" href="#minecraftgg">Minecraft.gg</a><a class="l" href="#sosyal">Sosyal</a></div></nav>
+
 <header class="hero" id="top">
 <div class="mark">Dッ</div>
 <h1>Merhaba, ben Dッ</h1>
-<p>İçerik üretiyor, kod yazıyor ve Minecraft sunucumu yönetiyorum.</p>
+<p>Minecraft sunucum, Minecraft.gg projem ve tüm sosyal medya hesaplarım tek yerde.</p>
 <a class="btn" href="#sunucu">Sunucuya gir</a><a class="btn o" href="#sosyal">Beni takip et</a>
 </header>
 
 <section id="sunucu">
-<h2>Minecraft sunucusu</h2>
-<div class="srv">
-<div class="card">
-<div class="ic">⛏</div>
-<h3>Sunucu: <span id="srvName">D</span></h3>
-<p>Eaglercraft 1.8.8 ile tarayıcıdan oyna.</p>
-<div class="addr" id="srvAddr"></div>
-<button class="btn o" id="copyBtn" type="button">Adresi kopyala</button>
-<a class="btn" id="playBtn" href="#" target="_blank" rel="noopener">Oyuna gir</a>
+<h2>Minecraft Sunucusu</h2>
+<div class="card srv">
+<div class="thumb"></div>
+<div><h3 style="font-size:1.4rem">D</h3><p>Eaglercraft 1.8.8 sunucusu</p></div>
+<div class="row"><span>Yazılım: <b>BungeeCord / EaglerXBungee</b></span><span>Sürüm: <b>1.8.8</b></span>
+<span>Durum: <span class="st" id="st"><span class="dot"></span><span id="stt">Kontrol ediliyor…</span></span></span></div>
+<div class="addr"><code id="addr">wss://dorukyuvel.github.io/D-/</code><button class="btn o" id="copy" type="button">Kopyala</button><button class="btn o" id="re" type="button">Durumu yenile</button></div>
+<div><a class="btn" href="https://minecraft-eaglercraft.github.io/go/minecraft-1.8.8/" target="_blank" rel="noopener">Eaglercraft’ı aç</a></div>
 </div>
-<div class="card">
-<div class="row"><span class="dot unk" id="dot"></span><span id="status">Yükleniyor…</span></div>
-<div class="big" id="count">—</div>
-<p>çevrimiçi oyuncu</p>
-<ul id="players"></ul>
-</div>
-</div>
+<p class="note">Oyunu açtıktan sonra Multiplayer → Add Server bölümüne adı <b>D</b>, adresi yukarıdaki WebSocket bağlantısı olarak gir.</p>
 </section>
 
-<section id="projeler">
-<h2>Projeler</h2>
-<div class="card mc">
-<div class="cube"></div>
-<div class="t">
-<h3>Minecraft.gg</h3>
-<p>Tarayıcıda oynanan kendi Minecraft oyunum: Overworld, Nether ve End, blok koyma/kırma, skin değiştirme.</p>
-<p style="margin-top:12px"><a class="btn" href="https://dorukyuvel.github.io/Minecraft.gg/Minecraft.gg.html" target="_blank" rel="noopener">Siteye gir</a><a class="btn o" href="Minecraft.gg.html" download="Minecraft.gg.html">İndir</a></p>
-</div>
+<section id="minecraftgg">
+<h2>Minecraft.gg</h2>
+<div class="card">
+<div class="thumb" style="background:linear-gradient(135deg,#ff9a1f,#4cff3a)"></div>
+<h3>Minecraft.gg</h3><p>Tarayıcıda çalışan Minecraft tarzı oyun projem.</p>
+<div style="margin-top:14px"><a class="btn" href="https://dorukyuvel.github.io/Minecraft.gg/Minecraft.gg.html" target="_blank" rel="noopener">Siteye gir</a><a class="btn o" href="Minecraft.gg.html" download>İndir</a></div>
 </div>
 </section>
 
@@ -93,11 +83,31 @@ footer{text-align:center;color:var(--muted);padding:36px 0 28px;font-size:.9rem}
 <a class="card" href="https://www.instagram.com/dorukyuvel/" target="_blank" rel="noopener"><div class="ic">IG</div><h3>Instagram</h3><p>@dorukyuvel</p></a>
 <a class="card" href="https://github.com/dorukyuvel" target="_blank" rel="noopener"><div class="ic">GH</div><h3>GitHub</h3><p>dorukyuvel</p></a>
 <a class="card" href="https://www.reddit.com/user/dorukyuvel/" target="_blank" rel="noopener"><div class="ic">RD</div><h3>Reddit</h3><p>u/dorukyuvel</p></a>
-<a class="card" href="https://kick.com/doruk-7854" target="_blank" rel="noopener"><div class="ic">KK</div><h3>Kick</h3><p>doruk-7854 — canlı yayınlar</p></a>
+<a class="card" href="https://kick.com/doruk-7854" target="_blank" rel="noopener"><div class="ic">KK</div><h3>Kick</h3><p>doruk-7854</p></a>
 </div>
 </section>
 <footer>© 2026 Dッ</footer>
 </div>
-<script src="server.js"></script>
+<script>
+var ADDR="wss://dorukyuvel.github.io/D-/";
+function setSt(c,t){var s=document.getElementById("st");s.className="st "+c;document.getElementById("stt").textContent=t}
+function check(){
+setSt("","Kontrol ediliyor…");
+var done=false,ws;
+function fin(c,t){if(done)return;done=true;setSt(c,t);try{ws&&ws.close()}catch(e){}}
+try{
+ws=new WebSocket(ADDR);
+var tm=setTimeout(function(){fin("off","Çevrimdışı")},6000);
+ws.onopen=function(){clearTimeout(tm);fin("on","Çevrimiçi")};
+ws.onerror=function(){clearTimeout(tm);fin("off","Çevrimdışı")};
+}catch(e){fin("off","Kontrol edilemedi")}
+}
+document.getElementById("re").onclick=check;
+document.getElementById("copy").onclick=function(){
+var b=this;
+try{navigator.clipboard.writeText(ADDR).then(function(){b.textContent="Kopyalandı ✓"},function(){b.textContent="Kopyalanamadı"})}catch(e){b.textContent="Kopyalanamadı"}
+setTimeout(function(){b.textContent="Kopyala"},1800)};
+check();
+</script>
 </body>
 </html>
